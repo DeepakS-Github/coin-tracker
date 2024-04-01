@@ -180,9 +180,11 @@ const Table = () => {
           ))}
         </tbody>
       </table>
+      <div className="show-on-mobile">
       {isModalOpen && (
         <Modal modalData={modalData} setIsModalOpen={setIsModalOpen} />
       )}
+      </div>
       <Pagination setCurrentPage={setCurrentPage} />
     </>
   );
