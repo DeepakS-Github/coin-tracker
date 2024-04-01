@@ -1,0 +1,98 @@
+.modal-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  width: 85%;
+  background-color: #ffffff;
+  margin: auto;
+  border-radius: 8px;
+  border: 1px solid #dbdcdf;
+  padding: 14px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.modal-title {
+  /* font-family: Inter; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  text-align: left;
+  gap: 8px;
+}
+
+.coin-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 15px;
+  color: #0f1629;
+}
+
+.spanned-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+  /* background-color: red; */
+  text-align: left;
+}
+
+.spanned-row-content {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  /* background-color: blue; */
+}
+
+.content-head {
+  /* font-family: Inter; */
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content-text {
+  /* font-family: Inter; */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22.5px;
+  text-align: left;
+}
+
+.full-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

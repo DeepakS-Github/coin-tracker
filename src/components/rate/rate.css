@@ -1,0 +1,11 @@
+.rate-container {
+  /* font-family: Inter; */
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15.73px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+}

@@ -1,0 +1,31 @@
+.pagination-container {
+  align-items: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 8px;
+  padding: 0;
+}
+
+.pagination-page {
+  border-radius: 4px;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dfe3e8;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination-active {
+  border: 1px solid #0052fe;
+  color: #0052fe;
+}
+
+.pagination-next-prev {
+  cursor: pointer;
+}
+

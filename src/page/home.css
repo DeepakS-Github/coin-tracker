@@ -1,0 +1,12 @@
+.card-main{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.tag-main{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}

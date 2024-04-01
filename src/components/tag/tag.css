@@ -1,0 +1,16 @@
+.tag-container{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    cursor: pointer;
+
+    background: #EFF2F5;
+    padding: 8px;
+    gap: 4px;
+    border-radius: 8px;
+
+    /* font-family: Inter; */
+    font-size: 12px;
+    font-weight: 500;
+}
