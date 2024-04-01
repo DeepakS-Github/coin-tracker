@@ -2,6 +2,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  width: 100%;
+  overflow-x: auto;
 }
 
 th {
@@ -41,7 +43,7 @@ tbody {
 
 .coin-name {
   display: flex;
-  border-bottom: 1px solid red;
+  /* border-bottom: 1px solid red; */
   gap: 6px;
   align-items: center;
 }
@@ -58,4 +60,39 @@ tbody {
 .coin-symbol-name {
   color: #808a9d;
   text-transform: uppercase;
+}
+
+.price{
+  text-align: right;
+}
+
+.day{
+  text-align: center;
+}
+
+.show-on-mobile{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  th, td{
+    padding-right: 10px;
+  }
+
+  .dont-show-on-mobile{
+    display: none;
+  }
+
+  .show-on-mobile{
+    display: block;
+  }
+  
+
+  .price{
+    text-align: left;
+  }
+  
+  .day{
+    text-align: left;
+  }
 }

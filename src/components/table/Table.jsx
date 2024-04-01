@@ -59,14 +59,21 @@ const Table = () => {
           <tr>
             <th></th>
             {header.map((item, index) => (
-              <th style={{ textAlign: align[index] }}>{item}</th>
+              <th
+                key={index}
+                style={{ textAlign: align[index] }}
+                className={(index >= 4 || index == 0) && "dont-show-on-mobile"}
+              >
+                {item}
+              </th>
             ))}
-            <th></th>
+            <th className="dont-show-on-mobile"></th>
           </tr>
         </thead>
         <tbody>
           {data.map((item, index) => (
             <tr
+              key={index}
               onClick={() => {
                 setIsModalOpen(true);
                 setModalData(item);
@@ -77,21 +84,24 @@ const Table = () => {
                 {" "}
                 <img src="/images/star.svg" />
               </td>
-              <td style={{ textAlign: "center" }}>
-                {(currentPage - 1) * 10 + index}
+              <td
+                style={{ textAlign: "center" }}
+                className="dont-show-on-mobile"
+              >
+                {(currentPage - 1) * 10 + index + 1}
               </td>
               <td style={{ textAlign: "left" }} className="coin-name">
                 <img src={item.image} className="coin-image" />
                 <span className="coin-main-name">{item.name}</span>
                 <span className="coin-symbol-name">{item.symbol}</span>
               </td>
-              <td style={{ textAlign: "right" }}>
+              <td className="price">
                 $
                 {item.current_price.toLocaleString("en-US", {
                   maximumFractionDigits: 2,
                 })}
               </td>
-              <td style={{ textAlign: "center" }}>
+              <td className="day">
                 <Rate
                   isIncreasing={
                     item.price_change_percentage_24h_in_currency > 0
@@ -100,7 +110,10 @@ const Table = () => {
                   justifyContent={"center"}
                 />
               </td>
-              <td style={{ textAlign: "right" }}>
+              <td
+                style={{ textAlign: "right" }}
+                className="dont-show-on-mobile"
+              >
                 {" "}
                 <Rate
                   isIncreasing={item.price_change_percentage_7d_in_currency > 0}
@@ -108,13 +121,19 @@ const Table = () => {
                   justifyContent={"right"}
                 />
               </td>
-              <td style={{ textAlign: "right" }}>
+              <td
+                style={{ textAlign: "right" }}
+                className="dont-show-on-mobile"
+              >
                 $
                 {item.market_cap.toLocaleString("en-US", {
                   maximumFractionDigits: 2,
                 })}
               </td>
-              <td style={{ textAlign: "right" }}>
+              <td
+                style={{ textAlign: "right" }}
+                className="dont-show-on-mobile"
+              >
                 <div style={{ display: "flex", flexDirection: "column" }}>
                   <span>
                     $
@@ -131,9 +150,10 @@ const Table = () => {
                 </div>
               </td>
               <td
+                className="dont-show-on-mobile"
                 style={{
                   textAlign: "right",
-                  display: "flex",
+                  // display: "flex",
                   flexDirection: "column",
                   gap: "4px",
                 }}
@@ -149,7 +169,10 @@ const Table = () => {
                   maxValue={item.total_supply}
                 />
               </td>
-              <td style={{ paddingLeft: "30px" }}>
+              <td
+                style={{ paddingLeft: "30px" }}
+                className="dont-show-on-mobile"
+              >
                 {" "}
                 <img src="/images/tablemenu.svg" />
               </td>

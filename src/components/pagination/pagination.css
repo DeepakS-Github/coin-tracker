@@ -29,3 +29,10 @@
   cursor: pointer;
 }
 
+
+@media (max-width: 768px) {
+    .pagination-container{
+      justify-content: center;
+    }
+  }
+
