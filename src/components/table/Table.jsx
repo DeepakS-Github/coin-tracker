@@ -90,10 +90,12 @@ const Table = () => {
               >
                 {(currentPage - 1) * 10 + index + 1}
               </td>
-              <td style={{ textAlign: "left" }} className="coin-name">
+              <td style={{ textAlign: "left" }} >
+                <div className="coin-name">
                 <img src={item.image} className="coin-image" />
                 <span className="coin-main-name">{item.name}</span>
                 <span className="coin-symbol-name">{item.symbol}</span>
+                </div>
               </td>
               <td className="price">
                 $
