@@ -49,7 +49,7 @@ const Table = () => {
       }
     };
 
-    // fetchData();
+    fetchData();
   }, [currentPage]);
 
   return (
